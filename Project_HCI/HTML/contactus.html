@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ERAMEN INDONESIA</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../CSS/contactus.css">
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <img src="../IMG/eramen_logo.png" alt="ERAMEN" width="180px" height="60px">
+
+        <div class="navbar-nav">
+            <a href="homepage.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="promotion.html">Promotion</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+        
+        <div class="navbar-extra">
+            <a href="#" id="menu"><i data-feather="menu"></i></a>
+        </div>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+    
+            <form id="contact-form" onsubmit="validateForm(event)">
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" name="full-name">
+                    <div id="name-error" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address:</label>
+                    <input type="email" id="email" name="email">
+                    <div id="email-error" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                    <div id="phone-error" class="error-message"></div>
+                </div>
+
+                <div class="form-group">
+                    <label for="preferences">Ramen:</label>
+                    <select id="preferences" name="preferences">
+                        <option value="">Select Ramen</option>
+                        <option value="ramen">Ramen</option>
+                        <option value="dry-ramen">Dry Ramen</option>
+                    </select>
+                    <div id="preferences-error" class="error-message"></div>
+                </div>
+
+                <div class="form-group checkbox center">
+                    <div class="test">
+                        <label for="newsletter" class="testLabel">
+                            I agree to receive the newsletter
+                        </label> 
+                        <input type="checkbox" id="newsletter" name="newsletter" class="testInput">
+                    </div>
+                <div id="newsletter-error" class="error-message"></div>
+                </div>
+                
+                <div class="center">
+                    <button type="submit">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="socials">
+            <a href="#"><i data-feather="instagram"></i></a>
+            <a href="#"><i data-feather="youtube"></i></a>
+            <a href="#"><i data-feather="twitter"></i></a>
+            <a href="#"><i data-feather="facebook"></i></a>
+        </div>
+        <div class="links">
+            <a href="homepage.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="promotion.html">Promotion</a>
+            <a href="aboutus.html">About Us</a>
+            <a href="contactus.html">Contact Us</a>
+        </div>
+        <div class="credit">
+            <p>&copy; 2015 ERAMEN. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div>
+        <!-- Icons -->
+        <script>
+            feather.replace()
+        </script>
+    </div>
+
+    <div>
+        <!-- JavaScript -->
+        <script src="../JAVA SCRIPT/contactus.js"></script>
+    </div>
+</body>
+</html>

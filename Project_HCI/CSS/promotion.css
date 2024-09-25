@@ -1,0 +1,223 @@
+:root{
+    --navbar: #000000;
+    --primary: #c3b59b;
+    --background: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: #000000;
+}
+
+/* Navbar */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgba(16, 16, 16, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99999;
+}
+
+.navbar .navbar-nav a{
+    color: #ffffff;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 1rem;
+}
+
+.navbar .navbar-nav a:hover{
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after{
+    transform: scaleX(1);
+}
+
+.navbar .navbar-extra a{
+    color: #ffffff;
+    margin: 0 0.5rem;
+}
+
+.navbar .navbar-extra a:hover{
+    color: var(--primary);
+}
+
+#menu{
+    display: none;
+}
+
+/* Promotion Section */
+.promo .promo_img img{
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.promo .mid_promo_img img{
+    display: none;
+}
+
+.promo{
+    padding: 8rem 7% 1;
+}
+
+.promo .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+.promo .row .product_list{
+    text-align: center;
+    padding-bottom: 3rem;
+}
+
+.promo .row .product_list img{
+    border-radius: 5%;
+    width: 50%;
+}
+
+.promo .row .product_list .title{
+    margin: 1rem auto 0.5rem;
+    font-size: 1.5rem;
+}
+
+.promo .row .product_list p span{
+    text-decoration: line-through;
+    color: red;
+    font-size: 0.8rem;
+}
+
+/* Footer */
+footer{
+    background-color: var(--navbar);
+    text-align: center;
+    padding: 1rem 0 2rem;
+}
+
+footer .socials{
+    padding: 1rem 0;
+}
+
+footer .socials a{
+    color: #ffffff;
+    margin: 1rem;
+}
+
+footer .socials a:hover{
+    color: var(--primary);
+}
+
+footer .links{
+    margin-bottom: 1.5rem;
+}
+
+footer .links a{
+    color: #ffffff;
+    padding: 0.7rem 1rem;
+}
+
+footer .links a:hover{
+    color: var(--primary);
+}
+
+footer .credit{
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Responsive screen */
+/* Laptop */
+@media (max-width: 1366px){
+    html{
+        font-size: 75%;
+    }
+}
+/* Tablet */
+@media (max-width: 768px){
+    html{
+        font-size: 62.5%;
+    }
+    #menu{
+        display: inline-block;
+    }
+    .navbar .navbar-nav{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: rgba(16, 16, 16, 0.4);
+        width: 30rem;
+        height: 100vh;
+        transition: 0.3s linear;
+    }
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+    .navbar .navbar-nav a{
+        color: var(--background);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+    .navbar .navbar-nav a::after{
+        transform-origin: 0 0;
+    }
+    .navbar .navbar-nav a:hover::after{
+        transform: scaleX(1);
+    }
+
+    .promo .mid_promo_img{
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        background-image: url('../IMG/mid_promo_banner.jpg');
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+        position: relative;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        padding: 8rem;
+        padding-right: 15rem;
+        margin-bottom: 5rem;
+    }
+    
+    .promo .promo_img img{
+        all: unset;
+        display: none;
+    }
+}
+/* Mobile */
+@media (max-width: 450px){
+    html{
+        font-size: 55%;
+    }
+}
